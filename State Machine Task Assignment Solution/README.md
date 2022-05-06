@@ -1,4 +1,4 @@
-# 基于状态机的可配置任务流转方案
+# 基于状态机的任务分发方案
 
 # 方案依赖
 
@@ -6,12 +6,10 @@
 
 如果你具有如下许可之一，则都可以使用该方案
 
-* 国际版Microsoft Power Apps per User Plan或per App Plan
-* 中国世纪互联版Microsoft Power Apps per User Plan或per App Plan
-* 国际版Microsoft Dynamics 365 Customer Engagement Apps
-* 中国世纪互联版Microsoft Dynamics 365 Customer Engagement Apps
+* 国际版或中国21v世纪互联版Microsoft Power Apps per User Plan或per App Plan
+* 国际版或中国21v世纪互联版Microsoft Dynamics 365 Customer Engagement Apps
 
-因为该方案会使用到Dataverse，因此Office 365自带的Power Apps版本无法使用。
+> 注意：因为该方案会使用到Dataverse，因此Office 365自带的Power Apps版本无法使用。
 
 ## 权限要求
 
@@ -20,7 +18,11 @@
 * 创建环境的权限
 * 导入解决方案
 
-# 解决方案架构
+# 解决方案
+
+## 架构
+
+## 数据模型
 
 # 安装
 
@@ -30,7 +32,8 @@
 
 ## 安装
 
-1. 将方案导入你的Power Platform环境。将开发环境和生产环境分开是一个好的习惯，这样不仅可以让你在后面按所需进行方案修改，同时又不会影响已经在使用的用户。
+1. 将方案导入你的Power Platform环境。将开发环境和生产环境分开是一个好习惯，这样可以让你在后面进行方案修改的同时不会影响已经在使用的用户。
+2. 基于你环境对base语言，可能需要对Model Driven Apps的Sitemap进行修改，发布后运行应该可以看到类似如下的界面
 
 ## 设置
 
