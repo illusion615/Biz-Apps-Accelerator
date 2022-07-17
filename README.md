@@ -102,3 +102,14 @@ Contoso行政部门需要对所有门店资产进行管理。内容包括：
 当前这些管理都是基于一份Excel文档进行的，Excel的问题在于无法优化信息采集以及进度更新的流程，前期及后期的大量协调工作还是需要手工进行，这导致了流程周期很长且缺乏灵活性。
 
 > Coming soon...
+
+### #4 CoE Starter Kit 21v部署
+企业Power Platform应用达成规模效益后，治理方法及工具将成为必不可少的内容，而Power Platform CoE Starter Kit则是微软为满足低代码全民应用而免费提供的工具。该工具套件可以在如下地址下载：
+* [Github存储](https://github.com/microsoft/coe-starter-kit)
+* [安装部署文档](https://docs.microsoft.com/en-us/power-platform/guidance/coe/setup)
+
+如果你使用的是海外版本的Power Platform，那按照上述文档安装即可，但如果客户满足如下情况，那该文档可以帮助你减少安装过程中的不必要麻烦。
+* 需要管理的是Power Platform 21v
+* 使用全球版本Office 365，在21v上并没有任何Office 365订阅（Outlook/Teams）
+
+[查看安装详情]()
