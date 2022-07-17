@@ -94,6 +94,7 @@
 | PowerApp Player environment variable     | The URL used by the Power Apps player for your cloud, including the trailing slash.                                                                                                                              | https://app.powerapps.cn                         |
 | Power Automate Environment variable      | The URL used for Power Automate                                                                                                                                                                                  | https://www.powerautomate.cn/manage/environments/                  |
 | TenantID                                 | 该ID可以在make.powerapps.cn的setting菜单下的Session Detail里面找到                                                                                                                                                                                            |
+
 其余变量可以在需要的时候再进行设置。
 
 ### 6. 修改Flow以匹配21v依赖
@@ -106,8 +107,10 @@
 #### 6.1 示例
 打开HELPER - Send Email Flow后会发现如下错误
 <img src="image/image2022-07-17 182746.png" alt="image2022-07-17 182746" style="zoom: 50%;" />
+
 在这里给出原本这里会使用邮件发送消息的相关参数供参考
 <img src="image/image 2022-07-17 190158.png" alt="image2022-07-17 182746" style="zoom: 100%;" />
+
 例如下图所示，我使用替代方案来实现邮件通知。
 <img src="image/image 2022-07-17 191111.png" alt="image 2022-07-17 191111.png" style="zoom: 50%;" />
 
@@ -183,6 +186,7 @@
 > 可能发生的错误：Request to XRM API failed with error: 'Message: Flow client error returned with status code "BadRequest" and details "{"error":{"code":"ChildFlowUnsupportedForInvokerConnections","message":"ID 为“309dccc8-a76b-ec11-8943-00224828fb29”、名称为 DLP Request | Apply Policy to Environment (Child) 的工作流不能用作子工作流，因为子工作流仅支持嵌入的连接。"}}". Code: 0x80060467 InnerError: '.
 解决方法：这是因为子工作流选择了用传入的身份调用连接，此处需要在子工作流Run only users设置处将Connection Used从Provided by run-only user设置为特定的连接，此设置需要将工作流重启才能生效。设置界面如下图所示（该图仅标注需要修改的位置，Provided by run-only user是错误的值，需要改为特定连接。）：
 <img src="image/image 2022-07-17 230735.png" alt="image 2022-07-17 191111.png" style="zoom: 50%;" />
+
 - DLP Request | Sync new Policy
 - DLP Request | Sync Shared Policies
 - Env Request | Cleanup environments
