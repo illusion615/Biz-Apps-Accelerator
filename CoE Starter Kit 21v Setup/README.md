@@ -40,7 +40,7 @@
 访问位于Github的CoE项目地址网址下载[最新的release版本](https://github.com/microsoft/coe-starter-kit/releases)
 因为后面需要对该版本做一些变更，请选择CoEStarterKit-Unmanaged.zip，即非托管版本。
 
-### 2. 解压并安装
+### 2. 解压
 在本地解压，里面会有很多文件，注意，这些文件需要按照特定的次序安装。具体可以参见[安装文档](https://docs.microsoft.com/en-us/power-platform/guidance/coe/setup)
 此处对这些安装包各自的功能及安装依赖做一个的概要说明
 | 文件名                                                      | 功能描述                                                                                                                                                                             | 依赖及安装建议                                                                                                       |           适用于21v           |
