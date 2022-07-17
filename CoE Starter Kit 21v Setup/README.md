@@ -68,19 +68,19 @@
 
 - HTTP with Azure AD，21v对应地址可以在[此处](https://docs.microsoft.com/en-us/graph/deployments#microsoft-graph-and-graph-explorer-service-root-endpoints)查询。
   此处给出Graph地址：https://microsoftgraph.chinacloudapi.cn
-  ![Establish an HTTP with Azure AD connection.](image\httpazuread.png)
+  ![Establish an HTTP with Azure AD connection.](image/httpazuread.png)
 
 最后应该只有两个连接器无法配置
 
-<img src="image\image-20220705010108848.png" alt="image-20220705010108848" style="zoom:50%;" />
+<img src="image/image-20220705010108848.png" alt="image-20220705010108848" style="zoom:50%;" />
 
 此时因为这两个连接器无法初始化，在make.powerapps.cn是无法进入到下一步的。因此需要取消，再如下图切换到经典模式完成方案的导入。在经典模式下缺失数据连接器初始化并不阻碍解决方案的导入。这个过程可能会需要十几分钟才会结束，此处可以有杯咖啡。
 
-<img src="image\image-20220705010351981.png" alt="image-20220705010351981" style="zoom:50%;" />
+<img src="image/image-20220705010351981.png" alt="image-20220705010351981" style="zoom:50%;" />
 
 导入完成后注意检查状态，会发现大部分错误是由于无法完成进程激活，这些在后面都会通过检查来手动激活。
 
-<img src="image\image-20220705011620182.png" alt="image-20220705011620182" style="zoom: 80%;" />
+<img src="image/image-20220705011620182.png" alt="image-20220705011620182" style="zoom: 80%;" />
 
 ### 5. 完成环境变量的设置
 部署完相关的solution包后，会出现若干预设的环境变量，其中部分是需要在初期完成设置才能完成后面Flow的成功激活。这些需要预设的环境变量如下：
@@ -105,11 +105,11 @@
 
 #### 6.1 示例
 打开HELPER - Send Email Flow后会发现如下错误
-<img src="image\image2022-07-17 182746.png" alt="image2022-07-17 182746" style="zoom: 50%;" />
+<img src="image/image2022-07-17 182746.png" alt="image2022-07-17 182746" style="zoom: 50%;" />
 在这里给出原本这里会使用邮件发送消息的相关参数供参考
-<img src="image\image 2022-07-17 190158.png" alt="image2022-07-17 182746" style="zoom: 100%;" />
+<img src="image/image 2022-07-17 190158.png" alt="image2022-07-17 182746" style="zoom: 100%;" />
 例如下图所示，我使用替代方案来实现邮件通知。
-<img src="image\image 2022-07-17 191111.png" alt="image 2022-07-17 191111.png" style="zoom: 50%;" />
+<img src="image/image 2022-07-17 191111.png" alt="image 2022-07-17 191111.png" style="zoom: 50%;" />
 
 #### 6.2 需修改Flow列表
 以下给出所有需要修改的Flow列表
@@ -182,7 +182,7 @@
 - DLP Request | Process Approved Policy Change
 > 可能发生的错误：Request to XRM API failed with error: 'Message: Flow client error returned with status code "BadRequest" and details "{"error":{"code":"ChildFlowUnsupportedForInvokerConnections","message":"ID 为“309dccc8-a76b-ec11-8943-00224828fb29”、名称为 DLP Request | Apply Policy to Environment (Child) 的工作流不能用作子工作流，因为子工作流仅支持嵌入的连接。"}}". Code: 0x80060467 InnerError: '.
 解决方法：这是因为子工作流选择了用传入的身份调用连接，此处需要在子工作流Run only users设置处将Connection Used从Provided by run-only user设置为特定的连接，此设置需要将工作流重启才能生效。设置界面如下图所示（该图仅标注需要修改的位置，Provided by run-only user是错误的值，需要改为特定连接。）：
-<img src="image\image 2022-07-17 230735.png" alt="image 2022-07-17 191111.png" style="zoom: 50%;" />
+<img src="image/image 2022-07-17 230735.png" alt="image 2022-07-17 191111.png" style="zoom: 50%;" />
 - DLP Request | Sync new Policy
 - DLP Request | Sync Shared Policies
 - Env Request | Cleanup environments
@@ -198,7 +198,7 @@
 - App Catalog > Request Access
 >需要移除Teams连接器并用替代方案取代。
 原Flow的配置截图供参考
-<img src="image\image 2022-07-17 224224.png" alt="image 2022-07-17 191111.png" style="zoom: 100%;" />
+<img src="image/image 2022-07-17 224224.png" alt="image 2022-07-17 191111.png" style="zoom: 100%;" />
 
 ### 10. 共享App
 需要将如下App共享给不同角色的用户，并赋予正确的安全角色

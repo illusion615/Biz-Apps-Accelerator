@@ -112,4 +112,4 @@ Contoso行政部门需要对所有门店资产进行管理。内容包括：
 * 需要管理的是Power Platform 21v
 * 使用全球版本Office 365，在21v上并没有任何Office 365订阅（Outlook/Teams）
 
-[查看安装详情]()
+[查看安装详情](https://github.com/illusion615/Biz-Apps-Accelerator/tree/main/CoE%20Starter%20Kit%2021v%20Setup)
