@@ -219,4 +219,8 @@
 |App Catalog|用户|Power Platform User SR|
 
 ### 11. Enjoy the CoE Starter Kit
+一般第一次数据同步会发生在半天之后，睡一觉起来应该就可以看到数据了。
+
+<img src="image/image 2022-07-18 140252.png" alt="image 2022-07-17 191111.png" style="zoom: 100%;" />
+
 有关CoE Starter Kit的详细使用方法请参阅 https://docs.microsoft.com/en-us/power-platform/guidance/coe/starter-kit-explained
